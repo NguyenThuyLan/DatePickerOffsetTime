@@ -24,7 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\DatePickerOffsetTime\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <Content Include="App_Plugins\DatePickerOffset\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
     <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
   </ItemGroup>
+  
+  <Target Name="NpmBuild" BeforeTargets="BeforePublish">
+    <Exec Command="npm ci" WorkingDirectory="App_Plugins\DatePickerOffset" />
+    <Exec Command="npm run build" WorkingDirectory="App_Plugins\DatePickerOffset" />
+  </Target>
+
 </Project>
