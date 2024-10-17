@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <DatePickerOffsetTimeContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\DatePickerOffsetTime\**\*.*</DatePickerOffsetTimeContentFilesPath>
+    <DatePickerOffsetTimeContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\DatePickerOffset\**\*.*</DatePickerOffsetTimeContentFilesPath>
   </PropertyGroup>
 
   <Target Name="CopyDatePickerOffsetTimeAssets" BeforeTargets="BeforeBuild">
@@ -8,12 +8,12 @@
       <DatePickerOffsetTimeContentFiles Include="$(DatePickerOffsetTimeContentFilesPath)" />
     </ItemGroup>
     <Message Text="Copying DatePickerOffsetTime files: $(DatePickerOffsetTimeContentFilesPath) - #@(DatePickerOffsetTimeContentFiles->Count()) files" Importance="high" />
-    <Copy SourceFiles="@(DatePickerOffsetTimeContentFiles)" DestinationFiles="@(DatePickerOffsetTimeContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\DatePickerOffsetTime\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(DatePickerOffsetTimeContentFiles)" DestinationFiles="@(DatePickerOffsetTimeContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\DatePickerOffset\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
 
   <Target Name="ClearDatePickerOffsetTimeAssets" BeforeTargets="Clean">
     <ItemGroup>
-      <DatePickerOffsetTimeDir Include="$(MSBuildProjectDirectory)\App_Plugins\DatePickerOffsetTime\" />
+      <DatePickerOffsetTimeDir Include="$(MSBuildProjectDirectory)\App_Plugins\DatePickerOffset\" />
     </ItemGroup>
     <Message Text="Clear old DatePickerOffsetTime data" Importance="high" />
     <RemoveDir Directories="@(DatePickerOffsetTimeDir)" />
