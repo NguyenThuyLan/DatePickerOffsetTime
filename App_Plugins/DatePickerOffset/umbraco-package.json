@@ -1,0 +1,46 @@
+﻿{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "My.AwesomePackage",
+  "version": "0.0.0",
+  "extensions": [
+    {
+      "type": "propertyEditorUi",
+      "alias": "Umb.PropertyEditorUi.DatePickerOffset",
+      "name": "Date Picker with offset time",
+      "element": "/App_Plugins/DatePickerOffset/dist/DatePickerOffset.js",
+      "elementName": "date-picker-offset-property-editor-ui",
+      "meta": {
+        "label": "Date Picker with offset time",
+        "icon": "icon-calendar",
+        "group": "pickers",
+        "propertyEditorSchemaAlias": "Umbraco.Plain.String",
+        "settings": {
+          "properties": [
+            {
+              "alias": "format",
+              "label": "Date format",
+              "description": "If left empty then the format is YYYY-MM-DD",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+            },
+            {
+              "alias": "readonly",
+              "label": "Read only",
+              "description": "To make the property editor read only",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            }
+          ],
+          "defaultData": [
+            {
+              "alias": "format",
+              "value": "YYYY-MM-DD HH:mm:ss"
+            },
+            {
+              "alias": "readonly",
+              "value": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
