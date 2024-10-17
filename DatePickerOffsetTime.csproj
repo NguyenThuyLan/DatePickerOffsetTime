@@ -29,8 +29,11 @@
   </ItemGroup>
   
   <Target Name="NpmBuild" BeforeTargets="BeforeBuild">
-    <Exec Command="npm install" WorkingDirectory="App_Plugins\DatePickerOffset" />
-    <Exec Command="npm run build" WorkingDirectory="App_Plugins\DatePickerOffset" />
+	  <Exec Command="npm install" WorkingDirectory="App_Plugins\DatePickerOffset" />
+	  <Exec Command="npm run build" WorkingDirectory="App_Plugins\DatePickerOffset" />
   </Target>
 
+	<Target Name="NpmRemove" AfterTargets="Build">
+		<RemoveDir Directories="App_Plugins\DatePickerOffset\node_modules" />
+	</Target>
 </Project>
