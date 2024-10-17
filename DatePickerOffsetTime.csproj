@@ -29,7 +29,7 @@
   </ItemGroup>
   
   <Target Name="NpmBuild" BeforeTargets="BeforePublish">
-    <Exec Command="npm ci" WorkingDirectory="App_Plugins\DatePickerOffset" />
+    <Exec Command="npm install" WorkingDirectory="App_Plugins\DatePickerOffset" />
     <Exec Command="npm run build" WorkingDirectory="App_Plugins\DatePickerOffset" />
   </Target>
 
