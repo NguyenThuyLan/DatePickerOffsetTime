@@ -7,7 +7,7 @@
       "type": "propertyEditorUi",
       "alias": "Umb.PropertyEditorUi.DatePickerOffset",
       "name": "Date Picker with offset time",
-      "element": "/App_Plugins/DatePickerOffset/dist/DatePickerOffset.js",
+      "element": "/App_Plugins/DatePickerOffset/dist/datepickeroffset.js",
       "elementName": "date-picker-offset-property-editor-ui",
       "meta": {
         "label": "Date Picker with offset time",
