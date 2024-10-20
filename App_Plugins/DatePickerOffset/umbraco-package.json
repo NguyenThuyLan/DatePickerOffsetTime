@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "../../umbraco-package-schema.json",
-  "name": "My.AwesomePackage",
+  "name": "DatePickerOffsetTime",
   "version": "0.0.0",
   "extensions": [
     {
@@ -36,7 +36,7 @@
             },
             {
               "alias": "readonly",
-              "value": true
+              "value": false
             }
           ]
         }

@@ -5,32 +5,29 @@ import { UmbPropertyEditorConfigCollection, UmbPropertyValueChangeEvent } from '
 
 @customElement('date-picker-offset-property-editor-ui')
 export default class DatePickerOffsetPropertyEditorUIElement extends LitElement implements UmbPropertyEditorUiElement {
-    @property()
+	@property()
 	value?: string;
 
-    @state()
+	@state()
 	private _inputValue?: string;
 
 	@state()
-	private _displayValue?: string;
-
-    @state()
 	private _min?: string;
 
 	@state()
 	private _max?: string;
 
-    @state()
+	@state()
 	private _step?: number;
 
 	@state()
 	private _readOnly?: boolean;
 
-    @state()
+	@state()
 	private _inputType: UmbInputDateElement['type'] = 'datetime-local';
 
-	public set config(config: UmbPropertyEditorConfigCollection | undefined){
-		if(!config) return;
+	public set config(config: UmbPropertyEditorConfigCollection | undefined) {
+		if (!config) return;
 
 		// Format string prevalue/config
 		const format = config.getValueByAlias<string>('format');
@@ -52,51 +49,44 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 		this._max = config.getValueByAlias('max');
 		this._step = (config.getValueByAlias('step') ?? hasSeconds) ? 1 : undefined;
 
-		this._displayValue = (new Date()).toString().split('(')[0].trim();
-		if(this.value){
+		if (this.value) {
 			this.#formatValue(this.value);
 		}
-		else{
-			if(this._readOnly){
-				this.#syncValue(this._displayValue);
-			}
-		}
 	}
-	
-	#convertTimeZone(dateString: string){
+
+	#convertTimeZone(dateString: string) {
 		let dateValue = new Date(dateString);
 
 		//Define options for formatting the date and time in current local
 
 		let formattedLocaleTime = new Intl.DateTimeFormat('en-US', {
-								weekday: 'short', 
-								year: 'numeric',    
-								month: 'short',    
-								day: '2-digit',     
-								hour: '2-digit',    
-								minute: '2-digit',  
-								second: '2-digit',  
-								hour12: false      
-						}).format(dateValue);
-		
+			weekday: 'short',
+			year: 'numeric',
+			month: 'short',
+			day: '2-digit',
+			hour: '2-digit',
+			minute: '2-digit',
+			second: '2-digit',
+			hour12: false
+		}).format(dateValue);
+
 		//Get the GMT offset
 		let gmtOffset = dateValue.getTimezoneOffset();
-		let offsetHours = Math.abs(Math.floor(gmtOffset / 60)).toString().padStart(2,'0');
-		let offsetMinutes = Math.abs(gmtOffset % 60).toString().padStart(2,'0');
-		let gmtString = `GMT${gmtOffset > 0 ? '-':'+'}${offsetHours}${offsetMinutes}`;
+		let offsetHours = Math.abs(Math.floor(gmtOffset / 60)).toString().padStart(2, '0');
+		let offsetMinutes = Math.abs(gmtOffset % 60).toString().padStart(2, '0');
+		let gmtString = `GMT${gmtOffset > 0 ? '-' : '+'}${offsetHours}${offsetMinutes}`;
 
 		let finalLocaleTimeString = `${formattedLocaleTime} ${gmtString}`;
 		return finalLocaleTimeString;
 	}
 
-	#formatValue(value: string){
+	#formatValue(value: string) {
 		this._inputValue = undefined;
 
-		if(isNaN(new Date(value).getTime())){
+		if (isNaN(new Date(value).getTime())) {
 			console.warn(`[UmbDatePicker] Invalid date: ${value}`);
 			return;
 		}
-		this._displayValue = this.#convertTimeZone(value);
 		var valueDate = new Date(this.#convertTimeZone(value));
 
 		let hours = valueDate.getHours();
@@ -106,7 +96,7 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 		let month = valueDate.getMonth() + 1;
 		let year = valueDate.getFullYear();
 		let timeValue = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-		let dateValue = `${year.toString()}-${month.toString().padStart(2,'0')}-${date.toString().padStart(2,'0')}`
+		let dateValue = `${year.toString()}-${month.toString().padStart(2, '0')}-${date.toString().padStart(2, '0')}`
 		switch (this._inputType) {
 			case 'time':
 				this._inputValue = `0001-01-01 ${timeValue}`;
@@ -115,13 +105,13 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 				this._inputValue = `${dateValue} 00:00:00`;
 				break;
 			default:
-				this._inputValue =`${dateValue} ${timeValue}`;
+				this._inputValue = `${dateValue} ${timeValue}`;
 				break;
 		}
 	}
 
-    #onChange(event: CustomEvent & { target: UmbInputDateElement }) {
-		 let value = event.target.value.toString();
+	#onChange(event: CustomEvent & { target: UmbInputDateElement }) {
+		let value = event.target.value.toString();
 
 		if (!value) {
 			this.#syncValue(undefined);
@@ -143,28 +133,28 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 		this.#syncValue(value);
 	}
 
-    #syncValue(value?: string) {
+	#syncValue(value?: string) {
 		const valueHasChanged = this.value !== value;
 		if (valueHasChanged) {
-			if(value){
+			if (value) {
 				let offsetTime = new Date(value?.toString()).toString();
 				this.value = offsetTime.split('(')[0].trim();
 			}
-			else{
+			else {
 				this.value = value;
 			}
-			
+
 			this.dispatchEvent(new UmbPropertyValueChangeEvent());
 		}
 	}
 
-    render() {
-		if(this._readOnly){
-			return html `
-			${this._displayValue}
+	render() {
+		if (this._readOnly) {
+			return html`
+			${this._inputValue}
 			`
 		}
-		else{
+		else {
 			return html`
 				<umb-input-date
 					.value=${this._inputValue}
@@ -177,11 +167,11 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 				</umb-input-date>
 				`;
 		}
-    }
+	}
 }
 
 declare global {
-    interface HTMLElementTagNameMap {
-        'date-picker-offset-property-editor-ui': DatePickerOffsetPropertyEditorUIElement;
-    }
+	interface HTMLElementTagNameMap {
+		'date-picker-offset-property-editor-ui': DatePickerOffsetPropertyEditorUIElement;
+	}
 }
