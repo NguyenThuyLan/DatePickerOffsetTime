@@ -12,8 +12,9 @@
     <PackageId>DatePickerOffsetTime</PackageId>
     <Product>DatePickerOffsetTime</Product>
     <Title>DatePickerOffsetTime</Title>
-    <Description>...</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <Description>The Date Picker Offset Time package provides a user-friendly umbraco property editor for selecting dates with precise time offsets. 
+  Designed for applications that require the user to select a date along with a customizable time offset (e.g., +2 hours from the selected time), this package allows seamless integration of both functionalities.</Description>
+    <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>
