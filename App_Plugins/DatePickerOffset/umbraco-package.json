@@ -1,7 +1,7 @@
 ﻿{
   "$schema": "../../umbraco-package-schema.json",
   "name": "DatePickerOffsetTime",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "extensions": [
     {
       "type": "propertyEditorUi",
