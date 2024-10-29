@@ -8,11 +8,11 @@ No configuration is required for the package. Once installed, simply log into th
 
 Create new content has DatePicker with Offset time property, select date and save, it will show the time to editors relative to their respective time zone.
 
-Below is the editor's time in the Danish time zone :flag-dk::
+Below is the editor's time in the Danish time zone:
 
 [![Screenshot 2](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/denmarkzone.png)](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/denmarkzone.png)
 
-And when viewed by an editor in the Vietnam time zone :flag-vn::
+And when viewed by an editor in the Vietnam time zone:
 
 [![Screenshot 3](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/vietnamzone.png)](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/vietnamzone.png)
 
