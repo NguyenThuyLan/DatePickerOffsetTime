@@ -1,3 +1,6 @@
-# DatePickerOffsetTime
+# DatePicker with Offset time
 
-This should allow you to add the property on any Umbraco Document type, to create Date Picker with Offset time.
+**DatePicker with Offset time** is a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does.
+
+No configuration is required for the package. Once installed, simply log into the BackOffice, and you will find a new property editor **DatePicker with Offset time**.
+

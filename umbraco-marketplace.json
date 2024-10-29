@@ -8,7 +8,6 @@
 		"Url": "https://github.com/NguyenThuyLan"
 	},
 	"Screenshots": [
-		
 	],
 	"Category": "Developer Tools",
 	"Description": "Its a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does",
