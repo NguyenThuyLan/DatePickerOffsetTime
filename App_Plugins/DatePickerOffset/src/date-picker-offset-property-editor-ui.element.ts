@@ -139,6 +139,10 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 			if (value) {
 				let offsetTime = new Date(value?.toString()).toString();
 				this.value = offsetTime.split('(')[0].trim();
+
+				if(this._readOnly){
+					this.#formatValue(value);
+				}
 			}
 			else {
 				this.value = value;
@@ -149,7 +153,7 @@ export default class DatePickerOffsetPropertyEditorUIElement extends LitElement 
 	}
 
 	render() {
-		if (this._readOnly) {
+		if (this._readOnly && this.value) {
 			return html`
 			${this._inputValue}
 			`
