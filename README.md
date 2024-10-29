@@ -5,3 +5,4 @@
 No configuration is required for the package. Once installed, simply log into the BackOffice, and you will find a new property editor **DatePicker with Offset time**.
 
 [![Screenshot 1](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/DatepickerOffsetTime.png)](https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/DatepickerOffsetTime.png)
+
