@@ -5,8 +5,16 @@
 	"AuthorDetails": {
 		"SyncContributorsFromRepository": true,
 		"Name": "Lan Nguyen Thuy",
-		"Url": "https://github.com/NguyenThuyLan"
+		"Url": "https://github.com/NguyenThuyLan",
+		"ImageUrl": "https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/DatePickerOffsetTimeLogo.png"
 	},
+	"Category": "Developer Tools",
+	"Description": "Its a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does",
+	"LicenseTypes": [ "Free" ],
+	"PackageType": "Package",
+	"Url": "https://www.nuget.org/packages/DatePickerOffsetTime",
+	"DocumentationUrl": "https://marketplace.umbraco.com/package/datepickeroffsettime",
+	"IssueTrackerUrl": "https://github.com/NguyenThuyLan/DatePickerOffsetTime/issues",
 	"Screenshots": [
 		{
 			"ImageUrl": "https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/Andre-Denmark.png",
@@ -36,13 +44,5 @@
 			"ImageUrl": "https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/lan-vietnam.png",
 			"Caption": "Vietnam"
 		}
-	],
-	"Category": "Developer Tools",
-	"Description": "Its a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does",
-	"LicenseTypes": [ "Free" ],
-	"PackageType": "Package",
-	"Url": "https://www.nuget.org/packages/DatePickerOffsetTime",
-	"DiscussionForumUrl": "https://github.com/NguyenThuyLan/DatePickerOffsetTime/issues",
-	"DocumentationUrl": "https://marketplace.umbraco.com/package/datepickeroffsettime",
-	"IssueTrackerUrl": "https://github.com/NguyenThuyLan/DatePickerOffsetTime/issues"
+	]
 }
