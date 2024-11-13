@@ -14,6 +14,11 @@
     <Title>DatePicker with Offset Time</Title>
     <Description>Its a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does.</Description>
     <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
+	<Authors>Lan Nguyen Thuy</Authors>
+	<PackageProjectUrl>https://github.com/NguyenThuyLan/DatePickerOffsetTime</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NguyenThuyLan/DatePickerOffsetTime</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   
   <ItemGroup>
