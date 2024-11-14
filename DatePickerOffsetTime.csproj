@@ -27,14 +27,14 @@
 		<None Include="LICENSE" Pack="true" PackagePath=""/>
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="14.3.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+  <None Update="logo.png" Pack="true" PackagePath="" />
+</ItemGroup>
 
   <ItemGroup>
     <Content Include="App_Plugins\DatePickerOffset\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
     <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
-	  <None Update="logo.png">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
-	  </None>
   </ItemGroup>
   
   <Target Name="NpmBuild" BeforeTargets="BeforeBuild">
