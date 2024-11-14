@@ -18,6 +18,7 @@
 	<PackageProjectUrl>https://github.com/NguyenThuyLan/DatePickerOffsetTime</PackageProjectUrl>
     <RepositoryUrl>https://github.com/NguyenThuyLan/DatePickerOffsetTime</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
+	<PackageIcon>images\DatePickerOffsetTimeLogo.png</PackageIcon>
   </PropertyGroup>
   
   <ItemGroup>
