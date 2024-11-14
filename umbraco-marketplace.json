@@ -42,6 +42,10 @@
 		{
 			"ImageUrl": "https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/lan-vietnam.png",
 			"Caption": "Vietnam"
+		},
+		{
+			"ImageUrl": "https://raw.githubusercontent.com/NguyenThuyLan/DatePickerOffsetTime/refs/heads/main/images/Heather-US.png",
+			"Caption": "United States"
 		}
 	]
 }
