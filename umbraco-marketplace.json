@@ -3,9 +3,9 @@
 	"Title": "DatePicker with Offset time",
 	"AddOnPackagesRequiredForUmbracoCloud": [],
 	"AuthorDetails": {
-		"SyncContributorsFromRepository": true,
-		"Name": "Lan Nguyen Thuy",
-		"Url": "https://github.com/NguyenThuyLan"
+		//"SyncContributorsFromRepository": true,
+		//"Name": "Lan Nguyen Thuy",
+		//"Url": "https://github.com/NguyenThuyLan"
 	},
 	"Category": "Developer Tools",
 	"Description": "Its a property editor that shows the time to editors relative to their respective time zone rather than the server time like what the default Umbraco date time picker does",
