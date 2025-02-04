@@ -1,5 +1,5 @@
 ﻿import { LitElement, html, customElement, property, state } from "@umbraco-cms/backoffice/external/lit";
-import { UmbPropertyEditorUiElement } from "@umbraco-cms/backoffice/extension-registry";
+import { UmbPropertyEditorUiElement } from "@umbraco-cms/backoffice/property-editor";
 import type { UmbInputDateElement } from '@umbraco-cms/backoffice/components';
 import { UmbPropertyEditorConfigCollection, UmbPropertyValueChangeEvent } from '@umbraco-cms/backoffice/property-editor';
 
